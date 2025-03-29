@@ -1,12 +1,44 @@
 <!DOCTYPE html>
-<html lang="pr-br">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>aluno</title>
+    <title>Aluno</title>
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
 </head>
 <body>
-    
-    
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <label for=""> Nome: </label>
+                <input type="text" class="form-control" id="campoNome">
+
+                <label for=""> Ano de Nascimento: </label>
+                <input type="number" class="form-control" id="campoAno">
+
+                <label for=""> Numero de CPF: </label>
+                <input type="number" class="form-control" id="campoCpf">
+
+                <label for=""> Endereço: </label>
+                <input type="text" class="form-control" id="campoEndereco">
+
+                <label for=""> Telefone: </label>
+                <input type="number" class="form-control" id="campoTelefone">
+
+                <button class="btn btn-primary mt-3" id="btnSalvar"> salvar </button>
+
+                <h3> Nome: <span id="nome"> </span></h3>
+                <h3> Ano de Nascimeto: <span id="ano"> </span></h3>
+                <h3> CPF: <span id="cpf"> </span></h3>
+                <h3> Endereço:<span id="endereco"></span></h3>
+                <h3> Telefone: <span id="telefone"></span></h3>
+                
+            </div>
+        </div>
+    </div>
+    <script src="./JavaScript/pessoa.js"></script>
+    <script src="./JavaScript/aluno.js"></script>
+    <script src="./JavaScript/main.js"></script>
+
 </body>
 </html>
