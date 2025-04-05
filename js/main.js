@@ -1,0 +1,42 @@
+"use strict";
+var escola;
+(function (escola_1) {
+    const btnSalvar = document.getElementById("Salvar");
+    const campoNome = document.getElementById("campoNome");
+    const campoanoNasc = document.getElementById("campoAno");
+    const campoCpf = document.getElementById("campoCpf");
+    const campoEndereco = document.getElementById("campoEndereco");
+    const campoTelefone = document.getElementById("campoTelefone");
+    btnSalvar.addEventListener("click", () => {
+        let p = new escola_1.Pessoa();
+        p.nome = campoNome.value;
+        p.anoNasc = parseInt(campoanoNasc.value);
+        p.cpf = campoCpf.value;
+        p.endereco = campoEndereco.value;
+        p.telefone = campoTelefone.value;
+        document.getElementById("campoNome").textContent = p.nome;
+        document.getElementById("anoNasc").textContent = p.anoNasc.toString();
+        document.getElementById("Cpf").textContent = p.cpf.toString();
+        document.getElementById("Endereco").textContent = p.endereco.toString();
+        document.getElementById("Telefone").textContent = p.telefone.toString();
+    });
+    const matricula = document.getElementById("Matricula");
+    const curso = document.getElementById("Curso");
+    const escola = document.getElementById("Escola");
+    const nota1 = document.getElementById("Nota1");
+    const nota2 = document.getElementById("Nota2");
+    const nota3 = document.getElementById("Nota3");
+    const nota4 = document.getElementById("Nota4");
+    const btnCalcular = document.getElementById("Calcular");
+    btnCalcular.addEventListener("click", () => {
+        let p = new escola_1.Aluno();
+        p.matricula = matricula.value;
+        p.curso = curso.value;
+        p.escola = escola.value;
+        p.nota1 = parseInt(nota1.value);
+        p.nota2 = parseInt(nota2.value);
+        p.nota3 = parseInt(nota3.value);
+        p.nota4 = parseInt(nota4.value);
+    });
+})(escola || (escola = {}));
+;

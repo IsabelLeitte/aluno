@@ -10,6 +10,7 @@
         private _nota2:number = 0;
         private _nota3:number = 0;
         private _nota4:number = 0;
+        public _calcularMedia:string = '';
         
         get matricula(){
             return this. _matricula;
@@ -58,6 +59,11 @@
         }
         set nota4(nota4:number){
             this._nota4 = nota4;
+        }
+
+        public calcularMedia() {
+
+            return (this._nota1 + this._nota2 + this._nota3 + this._nota4) / 4;
         }
     }
 }
